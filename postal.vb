@@ -3,6 +3,15 @@ Option Compare Database
 Public Const FIND_NUM As String = "壱弐参〇一二三四五六七八九十百千"
 Public Const FIND_TEXT As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+Public Sub TestCustomerBarCode()
+    Dim expected As String: expected = "23100321-2-1-6"
+    Dim actual As String: actual = CreateCustomerBarCode("231-0032", "神奈川県横浜市中区不老町一丁目2-1 中央第6関内ビル")
+    
+    If expected <> actual Then
+        MsgBox ("failed: { expected = " + expected + ", actual = " + actual + " }")
+    End If
+End Sub
+
 Public Function CreateCustomerBarCode(strZip As String, ByVal strAddress As String) As String
 
     Dim strRetZip       As String
