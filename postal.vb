@@ -14,30 +14,30 @@ End Sub
 
 Public Function CreateCustomerBarCode(strZip As String, ByVal strAddress As String) As String
 
-    Dim strRetZip       As String
-    Dim strRetAddress   As String
-    Dim strChar         As String
-    Dim blnConvFlg      As Boolean   'ハイフンに置き換え済みフラグ
-    Dim intLoop         As Integer
-    Dim i               As Integer
-    Dim j               As Integer
-    Dim intCount        As Integer
-    Dim intPos          As Integer
-    Dim intTextLength   As Integer
-    Dim intTargetPos    As Integer
-    Dim strFindKeyword  As String
-    Dim strTargetText   As String
-    Dim strConvertText  As String
-    Dim strTemp()       As String
-    Dim strResult       As String
-    Dim varConvertNum   As Variant
-    Dim varDeleteText   As Variant
-    Dim intFindPos      As Integer
-    Dim objRegExp       As RegExp   '参照設定要(Microsoft VBScript Regular Expressions 5.5)
+    Dim strRetZip As String
+    Dim strRetAddress As String
+    Dim strChar As String
+    Dim blnConvFlg As Boolean   'ハイフンに置き換え済みフラグ
+    Dim intLoop As Integer
+    Dim i As Integer
+    Dim j As Integer
+    Dim intCount As Integer
+    Dim intPos As Integer
+    Dim intTextLength As Integer
+    Dim intTargetPos As Integer
+    Dim strFindKeyword As String
+    Dim strTargetText As String
+    Dim strConvertText As String
+    Dim strTemp() As String
+    Dim strResult As String
+    Dim varConvertNum As Variant
+    Dim varDeleteText As Variant
+    Dim intFindPos As Integer
+    Dim objRegExp As RegExp   '参照設定要(Microsoft VBScript Regular Expressions 5.5)
     Dim objMatchCollect As MatchCollection
-    Dim objMatch        As Match
-    Dim strTarget()     As String
-    Dim intMatchPos()   As Integer
+    Dim objMatch As Match
+    Dim strTarget() As String
+    Dim intMatchPos() As Integer
    
     varConvertNum = Array("1", "2", "3", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "100", "1000")
    
